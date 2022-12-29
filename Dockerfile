@@ -1,4 +1,4 @@
-FROM codewithweeb/weebzone:stable
+FROM shikari11/29dec2022:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
