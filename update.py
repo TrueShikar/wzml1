@@ -1,3 +1,4 @@
+from keep_alive import keep_alive
 from logging import FileHandler, StreamHandler, INFO, basicConfig, error as log_error, info as log_info
 from os import path as ospath, environ, execl as osexecl
 from subprocess import run as srun
@@ -60,6 +61,7 @@ if update.returncode == 0:
     log_info('Successfully updated with latest commit from UPSTREAM_REPO')
     log_info(f'Upstream Repo: {UPSTREAM_REPO}')
     log_info(f'Upstream Branch: {UPSTREAM_BRANCH}')
+    keep_alive()
 else:
     log_error('Something went wrong while updating, check UPSTREAM_REPO if valid or not!')
     log_info(f'Entered Upstream Repo: {UPSTREAM_REPO}')
